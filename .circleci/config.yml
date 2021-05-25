@@ -1,7 +1,7 @@
 version: '2.1'
 
 jobs:
-  install-mabl-cli:
+  run-e2e-by-cli:
     docker:
       - image: circleci/node:stable
     steps:
@@ -18,7 +18,7 @@ jobs:
 
 
 workflows:
-  install-and-e2etest:
+  install-and-run-test:
     jobs:
-      - run-e2etest-by-mabl-cli
+      - run-e2e-by-cli
 
