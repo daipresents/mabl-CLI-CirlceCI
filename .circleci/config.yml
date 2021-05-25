@@ -1,0 +1,24 @@
+version: '2.1'
+
+jobs:
+  install-mabl-cli:
+    docker:
+      - image: circleci/node:stable
+    steps:
+      - run:
+          name: install-mabl-cli
+          command: npm i -g @mablhq/mabl-cli
+      - run:
+          name: mabl-auth
+          command: mabl auth activate-key MABL_API_KEY
+      - run:
+          name: check-mabl-auth
+          command: mabl auth info
+      - run: mabl tests run --from-plan-id k6gNBmsMmM48DBE1gpoAUQ-p
+
+
+workflows:
+  install-and-e2etest:
+    jobs:
+      - run-e2etest-by-mabl-cli
+
