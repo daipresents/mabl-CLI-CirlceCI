@@ -3,7 +3,7 @@ version: '2.1'
 jobs:
   run-e2e-by-cli:
     docker:
-      - image: circleci/node:stable
+      - image: circleci/node:jessie-browsers
     steps:
       - run:
           name: install-mabl-cli
