@@ -7,7 +7,7 @@ jobs:
     steps:
       - run:
           name: Install mabl CLI
-          command: npm i -g @mablhq/mabl-cli@latest
+          command: sudo npm i -g @mablhq/mabl-cli@latest
       - run:
           name: mabl Auth
           command: mabl auth activate-key MABL_API_KEY
