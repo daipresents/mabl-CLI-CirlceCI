@@ -7,7 +7,7 @@ jobs:
     steps:
       - run:
           name: Install node.js
-          command: sudo apt update && sudo apt install nodejs npm
+          command: sudo apt install nodejs npm
       - run:
           name: Install mabl CLI
           command: sudo npm i -g @mablhq/mabl-cli@latest
