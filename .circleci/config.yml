@@ -9,7 +9,10 @@ jobs:
           name: Setup nodesource
           command: curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
       - run:
-          name: Install node.js
+          name: Setup some library for nodejs
+          command: sudo apt install nodejs-dev node-gyp libssl1.0-dev 
+      - run:
+          name: Install nodejs and npm
           command: sudo apt install nodejs npm
       - run:
           name: Install mabl CLI
