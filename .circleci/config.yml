@@ -10,7 +10,7 @@ jobs:
           command: sudo npm i -g @mablhq/mabl-cli@latest
       - run:
           name: mabl Auth
-          command: mabl auth activate-key MABL_API_KEY
+          command: mabl auth activate-key $MABL_API_KEY
       - run:
           name: check mabl Auth
           command: mabl auth info
