@@ -6,13 +6,13 @@ jobs:
       - image: circleci/node:jessie-browsers
     steps:
       - run:
-          name: install-mabl-cli
-          command: npm i -g @mablhq/mabl-cli
+          name: Install mabl CLI
+          command: npm i -g @mablhq/mabl-cli@latest
       - run:
-          name: mabl-auth
+          name: mabl Auth
           command: mabl auth activate-key MABL_API_KEY
       - run:
-          name: check-mabl-auth
+          name: check mabl Auth
           command: mabl auth info
       - run: mabl tests run --from-plan-id k6gNBmsMmM48DBE1gpoAUQ-p
 
