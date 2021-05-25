@@ -14,8 +14,7 @@ jobs:
       - run:
           name: check mabl Auth
           command: mabl auth info
-      - run: mabl tests run --from-plan-id k6gNBmsMmM48DBE1gpoAUQ-p
-
+      - run: mabl tests run-alpha --from-plan-id k6gNBmsMmM48DBE1gpoAUQ-p --headless
 
 workflows:
   install-and-run-test:
