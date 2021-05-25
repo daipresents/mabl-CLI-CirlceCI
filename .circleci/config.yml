@@ -6,11 +6,8 @@ jobs:
       - image: selenium/node-chrome-debug
     steps:
       - run:
-          name: Setup nodesource
-          command: curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-      - run:
-          name: SInstall nodejs and npm
-          command: sudo apt install nodejs-dev node-gyp nodejs npm
+          name: Install nodejs and npm
+          command: sudo apt install nodejs npm
       - run:
           name: Install mabl CLI
           command: sudo npm i -g @mablhq/mabl-cli@latest
